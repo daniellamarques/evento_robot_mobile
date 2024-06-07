@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.3 on darwin)" generated="20240604 17:24:25.684" rpa="false" schemaversion="4">
+<suite id="s1" name="ROBOT-MOBILE" source="/Users/mblabs/Downloads/ROBOT-MOBILE">
+<suite id="s1-s1" name="Src" source="/Users/mblabs/Downloads/ROBOT-MOBILE/src">
+<suite id="s1-s1-s1" name="Appium" source="/Users/mblabs/Downloads/ROBOT-MOBILE/src/Appium">
+<suite id="s1-s1-s1-s1" name="Clients" source="/Users/mblabs/Downloads/ROBOT-MOBILE/src/Appium/Clients">
+<suite id="s1-s1-s1-s1-s1" name="Bankeiro" source="/Users/mblabs/Downloads/ROBOT-MOBILE/src/Appium/Clients/Bankeiro.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Recuperar Login" line="10">
+<kw name="Iniciar Aplicativo" library="Config" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICENAME}</arg>
+<arg>appPackage=${ANDROID_APPPACKAGE}</arg>
+<arg>appActivity=${ANDROID_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20240604 17:24:25.800" endtime="20240604 17:24:31.949"/>
+</kw>
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>30s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20240604 17:24:31.951" endtime="20240604 17:24:31.955"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>//android.widget.ScrollView</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20240604 17:24:35.353" level="INFO">xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView
+xpath criteria: //android.widget.ScrollView</msg>
+<status status="PASS" starttime="20240604 17:24:31.956" endtime="20240604 17:24:35.355"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:25.799" endtime="20240604 17:24:35.356"/>
+</kw>
+<kw name="CT: Recuperar login com sucesso" library="Forgot_Login">
+<kw name="Dado que o usuário esteja na home" library="Home">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240604 17:24:35.958" level="INFO">xpath criteria: //android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]</msg>
+<status status="PASS" starttime="20240604 17:24:35.372" endtime="20240604 17:24:35.958"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:35.362" endtime="20240604 17:24:35.959"/>
+</kw>
+<kw name="E clicar em" library="Insert_Text">
+<arg>ENTRAR</arg>
+<arg>15s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:37.961" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:35.959" endtime="20240604 17:24:37.961"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="AppiumLibrary">
+<arg>${LOADING_IMAGE}</arg>
+<arg>60s</arg>
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<msg timestamp="20240604 17:24:38.034" level="INFO">xpath criteria: //img[@class="loading__inner__img"]</msg>
+<status status="PASS" starttime="20240604 17:24:37.962" endtime="20240604 17:24:38.034"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${texto}</arg>
+<arg>${time}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20240604 17:24:38.035" endtime="20240604 17:24:38.094"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${texto}</arg>
+<doc>Click text identified by ``text``.</doc>
+<msg timestamp="20240604 17:24:38.220" level="INFO">xpath criteria: //*[contains(@text,"ENTRAR")]</msg>
+<status status="PASS" starttime="20240604 17:24:38.094" endtime="20240604 17:24:38.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:40.222" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:38.221" endtime="20240604 17:24:40.223"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:35.959" endtime="20240604 17:24:40.224"/>
+</kw>
+<kw name="E clicar em" library="Insert_Text">
+<arg>Esqueceu o login?</arg>
+<arg>15s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:42.228" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:40.226" endtime="20240604 17:24:42.229"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="AppiumLibrary">
+<arg>${LOADING_IMAGE}</arg>
+<arg>60s</arg>
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<msg timestamp="20240604 17:24:42.406" level="INFO">xpath criteria: //img[@class="loading__inner__img"]</msg>
+<status status="PASS" starttime="20240604 17:24:42.230" endtime="20240604 17:24:42.406"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${texto}</arg>
+<arg>${time}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20240604 17:24:42.406" endtime="20240604 17:24:42.476"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${texto}</arg>
+<doc>Click text identified by ``text``.</doc>
+<msg timestamp="20240604 17:24:42.594" level="INFO">xpath criteria: //*[contains(@text,"Esqueceu o login?")]</msg>
+<status status="PASS" starttime="20240604 17:24:42.476" endtime="20240604 17:24:42.595"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:44.596" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:42.595" endtime="20240604 17:24:44.597"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:40.225" endtime="20240604 17:24:44.597"/>
+</kw>
+<kw name="Quando preencher o CNPJ corretamente" library="Forgot_Login">
+<kw name="E preencher entrada" library="Insert_Text">
+<arg>${INPUT_CNPJ}</arg>
+<arg>${CNPJ}</arg>
+<kw name="Wait Until Page Does Not Contain Element" library="AppiumLibrary">
+<arg>${LOADING_IMAGE}</arg>
+<arg>60s</arg>
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<msg timestamp="20240604 17:24:44.670" level="INFO">xpath criteria: //img[@class="loading__inner__img"]</msg>
+<status status="PASS" starttime="20240604 17:24:44.600" endtime="20240604 17:24:44.670"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${input_locator}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20240604 17:24:44.745" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="recoverCpfCnpj_TaxIdScreen_cpfCnpjInput"]</msg>
+<status status="PASS" starttime="20240604 17:24:44.671" endtime="20240604 17:24:44.745"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>${input_locator}</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20240604 17:24:44.747" level="INFO">Clear text field '//android.widget.EditText[@resource-id="recoverCpfCnpj_TaxIdScreen_cpfCnpjInput"]'</msg>
+<msg timestamp="20240604 17:24:44.817" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="recoverCpfCnpj_TaxIdScreen_cpfCnpjInput"]</msg>
+<status status="PASS" starttime="20240604 17:24:44.745" endtime="20240604 17:24:44.818"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${input_locator}</arg>
+<arg>${text_to_input}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20240604 17:24:44.820" level="INFO">Typing text '24745587000126' into text field '//android.widget.EditText[@resource-id="recoverCpfCnpj_TaxIdScreen_cpfCnpjInput"]'</msg>
+<msg timestamp="20240604 17:24:45.921" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="recoverCpfCnpj_TaxIdScreen_cpfCnpjInput"]</msg>
+<status status="PASS" starttime="20240604 17:24:44.818" endtime="20240604 17:24:45.921"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:44.599" endtime="20240604 17:24:45.922"/>
+</kw>
+<kw name="E clicar em" library="Insert_Text">
+<arg>RECUPERAR</arg>
+<arg>15s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:47.926" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:45.923" endtime="20240604 17:24:47.927"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="AppiumLibrary">
+<arg>${LOADING_IMAGE}</arg>
+<arg>60s</arg>
+<doc>Waits until element specified with `locator` disappears from current page.</doc>
+<msg timestamp="20240604 17:24:48.009" level="INFO">xpath criteria: //img[@class="loading__inner__img"]</msg>
+<status status="PASS" starttime="20240604 17:24:47.928" endtime="20240604 17:24:48.009"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>${texto}</arg>
+<arg>${time}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20240604 17:24:48.009" endtime="20240604 17:24:48.094"/>
+</kw>
+<kw name="Click Text" library="AppiumLibrary">
+<arg>${texto}</arg>
+<doc>Click text identified by ``text``.</doc>
+<msg timestamp="20240604 17:24:48.204" level="INFO">xpath criteria: //*[contains(@text,"RECUPERAR")]</msg>
+<status status="PASS" starttime="20240604 17:24:48.094" endtime="20240604 17:24:48.206"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:50.209" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240604 17:24:48.208" endtime="20240604 17:24:50.210"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:45.922" endtime="20240604 17:24:50.211"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:44.598" endtime="20240604 17:24:50.211"/>
+</kw>
+<kw name="Então uma mensagem de sucesso será exibida" library="Home">
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Seu login foi enviado para o email:</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20240604 17:24:50.213" endtime="20240604 17:24:50.311"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:50.212" endtime="20240604 17:24:50.311"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:35.357" endtime="20240604 17:24:50.312"/>
+</kw>
+<kw name="Fechar Aplicativo" library="Config" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240604 17:24:51.316" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240604 17:24:50.313" endtime="20240604 17:24:51.317"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20240604 17:24:51.317" endtime="20240604 17:24:51.888"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:50.313" endtime="20240604 17:24:51.889"/>
+</kw>
+<status status="PASS" starttime="20240604 17:24:25.799" endtime="20240604 17:24:51.890"/>
+</test>
+<doc>Gerenciamento de casos de teste</doc>
+<status status="PASS" starttime="20240604 17:24:25.708" endtime="20240604 17:24:51.894"/>
+</suite>
+<status status="PASS" starttime="20240604 17:24:25.708" endtime="20240604 17:24:51.896"/>
+</suite>
+<status status="PASS" starttime="20240604 17:24:25.707" endtime="20240604 17:24:51.898"/>
+</suite>
+<status status="PASS" starttime="20240604 17:24:25.706" endtime="20240604 17:24:51.900"/>
+</suite>
+<status status="PASS" starttime="20240604 17:24:25.687" endtime="20240604 17:24:51.902"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="ROBOT-MOBILE">ROBOT-MOBILE</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Src">ROBOT-MOBILE.Src</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Appium">ROBOT-MOBILE.Src.Appium</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Clients">ROBOT-MOBILE.Src.Appium.Clients</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="Bankeiro">ROBOT-MOBILE.Src.Appium.Clients.Bankeiro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
